@@ -9,4 +9,4 @@ margarita:
     - user: root
     - rev: {{ pillar['margarita_version'] }}
     - require:
-        pkg: git-install
+      - pkg: git-install
