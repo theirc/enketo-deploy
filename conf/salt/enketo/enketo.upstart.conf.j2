@@ -1,0 +1,12 @@
+description "Enketo server"
+start on runlevel [2345]
+stop on runlevel [06]
+
+console log
+setuid {{ user }}
+setgid {{ user }}
+
+chdir {{ repo_dir }}
+
+respawn
+exec /usr/bin/node app.js
